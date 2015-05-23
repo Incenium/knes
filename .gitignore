@@ -30,3 +30,10 @@
 
 # Debug files
 *.dSYM/
+
+# misc
+Makefile
+nbproject
+build
+dist
+.dep.inc
