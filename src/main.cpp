@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include "../header/cpu.h"
 
 int main(int argc, char* argv[])
 {
@@ -9,12 +10,11 @@ int main(int argc, char* argv[])
     std::vector<char> bin((std::istreambuf_iterator<char>(rom)),
                             std::istreambuf_iterator<char>());
 
-    // need to figure out best way to iterate through ROM here
-    // this loop is just to show you that the vector works because first 3 chars
-    // are "NES", which is what it should be per http://nesdev.com/NESDoc.pdf
-    for (int i = 0; i < 3; i++) {
-        std::cout << bin[i];
-    }
+    // example code for main emulator loop
+    // while (true) {
+    //  int op = MMU.rb(CPU.pc++);
+    //  CPU.handleOp(op)
+    //  CPU.clock += CPU.rClock
 
     return 0;
 }
